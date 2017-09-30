@@ -79,7 +79,7 @@ class VisitorView: UIView {
     // MARK: - 内部控件方法
     private func startAnimation() {
         let anim = CABasicAnimation(keyPath: "transform.rotation")
-        anim.toValue = 2 * M_PI
+        anim.toValue = 2 * Double.pi
         anim.repeatCount = MAXFLOAT
         anim.duration = 20.0
         //代表动画执行完毕移除

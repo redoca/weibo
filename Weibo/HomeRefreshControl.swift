@@ -93,7 +93,7 @@ class HomeRefreshView : UIView {
     
     // 旋转箭头
     func rotaionArrowIcon(flag: Bool) {
-        var angle = M_PI
+        var angle = Double.pi
         angle += flag ? -0.01 : 0.01
         UIView.animate(withDuration: 0.2) { 
             self.arrowIcon.transform = self.arrowIcon.transform.rotated(by: CGFloat(angle))
@@ -108,7 +108,7 @@ class HomeRefreshView : UIView {
         tipView.isHidden = true
         
         let anim = CABasicAnimation(keyPath: "transform.rotation")
-        anim.toValue = 2 * M_PI
+        anim.toValue = 2 * Double.pi
         anim.repeatCount = MAXFLOAT
         anim.duration = 1.0
         //代表动画执行完毕移除
