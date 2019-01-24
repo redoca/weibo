@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 加载数据库
         SQLiteManager.shareManager().openDB("weibo.db")
         
-        // 注册切换主视图通知
+        // 注册切换主视图通
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.switchRootViewController(_:)), name: NSNotification.Name(rawValue: SwitchRootViewControllerKey), object: nil)
         
         window = UIWindow(frame: UIScreen.main.bounds)
